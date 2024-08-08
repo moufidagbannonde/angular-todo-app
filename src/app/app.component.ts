@@ -10,6 +10,13 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  title:string = "Moufid"
+
+  logo1:string = "../assets/capeverdeflag.jpg"
+  
+  logo2:string = "../assets/qrcode_chrome.png"
+  
+  logo3:string = "../assets/manuel_pinto_da_costa_en_1986_au_maryland_usa.jpg"
   productList!: Todo[];
   editData!: Todo;
   dataSources: any;

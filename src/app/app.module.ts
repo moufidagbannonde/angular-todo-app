@@ -15,10 +15,12 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TodoFooterComponent } from './todo-footer/todo-footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoFooterComponent
   ],
   imports: [
     BrowserModule,

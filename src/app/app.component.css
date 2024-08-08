@@ -1,17 +1,57 @@
-button{
-    margin:2px;
+button {
+    margin: 2px;
 }
-mat-card{
-    margin:2%;
+
+mat-card {
+    margin: 2%;
     text-align: center;
 }
+
+img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.img {
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: none;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: rgba(9, 230, 46, 0.848);
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* .btn btn-primary {
+    height: 35px;
+    width: 100%;
+    margin-top: 10px;
+    justify-content: center;
+  
+    cursor: pointer;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+} */
 h1 {
     margin-top: 10px;
     text-align: center;
     font-size: 45px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-th, td {
+
+th,
+td {
     border-collapse: collapse;
     border: 1px solid;
 }
