@@ -14,17 +14,15 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TodoFooterComponent } from './todo-footer/todo-footer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoFooterComponent,
-  
-    PageNotFoundComponent,
-
+    TodoFooterComponent,  
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +34,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatFormFieldModule,
     HttpClientInMemoryWebApiModule.forRoot(DataService),
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     provideAnimationsAsync()

@@ -5,7 +5,7 @@ import { Todo } from '../models/todo';
 @Injectable({
   providedIn: 'root'
 })
-export class MasterService {
+export class TodoService {
 
   constructor(private http:HttpClient) { }
   apiUrl='api/products/';
@@ -18,12 +18,12 @@ export class MasterService {
     return this.http.get<Todo>(this.apiUrl+id);
   }
 
-  createProduct(product:Todo){
-    return this.http.post(this.apiUrl,product);
+  createProduct(todo:Todo){
+    return this.http.post(this.apiUrl,todo);
   }
 
-  updateProduct(product:Todo){
-    return this.http.put(this.apiUrl+product.id,product);
+  updateProduct(todo:Todo){
+    return this.http.put(this.apiUrl+todo.id,todo);
   }
 
   deleteProduct(id:number){
