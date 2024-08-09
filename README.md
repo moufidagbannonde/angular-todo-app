@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Angular-Todo-App
+=======
+# Angular Todo App
+>>>>>>> 5d9620afbb9a02088477ea8134259d15a94c9ca0
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.0.
 
