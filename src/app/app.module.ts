@@ -16,11 +16,15 @@ import { DataService } from './services/data.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TodoFooterComponent } from './todo-footer/todo-footer.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoFooterComponent
+    TodoFooterComponent,
+  
+    PageNotFoundComponent,
+
   ],
   imports: [
     BrowserModule,

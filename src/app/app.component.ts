@@ -7,7 +7,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
   title:string = "Moufid"
@@ -32,17 +32,17 @@ export class AppComponent implements OnInit {
     description: ['', Validators.required],
   });
   ngOnInit(): void {
-    this.loadProduct();
+    this.loadTodo();
   }
 
-  loadProduct() {
+  loadTodo() {
     this.service.getAll().subscribe((item) => {
       this.productList = item;
       this.dataSources = new MatTableDataSource(this.productList);
     });
   }
 
-  saveProduct() {
+  saveTodo() {
     if (this.productForm.valid) {
       let obj: Todo = {
         id: this.productForm.value.id as number,
@@ -51,13 +51,13 @@ export class AppComponent implements OnInit {
       };
       if (this.isAdd) {
         this.service.createProduct(obj).subscribe((item) => {
-          this.loadProduct();
+          this.loadTodo();
           alert('Tâche brillament créée !');
         });
       } else {
         obj.id = this.productForm.getRawValue().id as number;
         this.service.updateProduct(obj).subscribe((item) => {
-          this.loadProduct();
+          this.loadTodo();
           alert('Tâche modifiée avec succès !');
         });
       }
@@ -66,7 +66,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  editProduct(id: number) {
+  editTodo(id: number) {
     this.service.getProduct(id).subscribe((data) => {
       this.editData = data;
       this.productForm.setValue({
@@ -78,10 +78,10 @@ export class AppComponent implements OnInit {
     });
   }
 
-  deleteProduct(id: number) {
+  deleteTodo(id: number) {
     if (confirm('Voulez-vous vraiment supprimer la tâche ?')) {
       this.service.deleteProduct(id).subscribe((data) => {
-        this.loadProduct();
+        this.loadTodo();
         alert('Tâche supprimée brillament !');
       });
     }

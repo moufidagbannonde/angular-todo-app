@@ -1,6 +1,7 @@
 <h1>
-  Moufid Todo-App
+  Moufid Product-App
 </h1>
+
 <div class="img">
   <a href="#">
     <!-- [src]="logo" est appelée du property binding 
@@ -34,7 +35,7 @@ height: 50px;margin: 0 auto;margin-bottom: 20px;">
     <span class="visually-hidden">Messages non lus</span>
   </span>
 </button>
-<mat-card>
+<div>
   <mat-card-header>
     <button class="button" (click)="showAddProductForm()">Ajouter une tâche(+)</button>
   </mat-card-header>
@@ -63,8 +64,8 @@ height: 50px;margin: 0 auto;margin-bottom: 20px;">
           <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef> Action </th>
             <td mat-cell *matCellDef="let element">
-              <button class="btn btn-success" (click)="editProduct(element.id)">Edit</button>
-              <button class="btn btn-danger" (click)="deleteProduct(element.id)">Delete</button>
+              <button class="btn btn-success" (click)="editTodo(element.id)">Edit</button>
+              <button class="btn btn-danger" (click)="deleteTodo(element.id)">Delete</button>
 
             </td>
           </ng-container>
@@ -76,7 +77,7 @@ height: 50px;margin: 0 auto;margin-bottom: 20px;">
 
     </mat-card>
 
-    <form [formGroup]="productForm" (ngSubmit)="saveProduct()" *ngIf="isAdd || isEdit">
+    <form [formGroup]="productForm" (ngSubmit)="saveTodo()" *ngIf="isAdd || isEdit">
       <div class="card mb-3" style="width: 350px;margin: 0 auto;">
         <mat-card-header>
           <h2>Tâche</h2>
@@ -106,8 +107,11 @@ height: 50px;margin: 0 auto;margin-bottom: 20px;">
 
   </mat-card-content>
 
-</mat-card>
+</div>
 
 <app-todo-footer>
-  
+
 </app-todo-footer>
+<router-outlet>
+
+</router-outlet>

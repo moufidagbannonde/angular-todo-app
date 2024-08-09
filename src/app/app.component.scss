@@ -55,3 +55,32 @@ td {
     border-collapse: collapse;
     border: 1px solid;
 }
+nav {
+    background-color: #e4cfcf;
+    padding: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: start;
+}
+
+li {
+    display: inline;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+    
+}
+
+/* Set the background color for the active link */
+.active {
+    background-color: #777; 
+    color: white;
+}
